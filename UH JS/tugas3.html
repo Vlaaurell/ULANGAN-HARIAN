@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jenis Seragam Murid</title>
+</head>
+<body>
+    <h1>Jenis Seragam Murid</h1> <!-- Judul tambahan -->
+    <label for="hari">Pilih hari:</label>
+    <select id="hari">
+        <option value="senin">Senin</option>
+        <option value="selasa">Selasa</option>
+        <option value="rabu">Rabu</option>
+        <option value="kamis">Kamis</option>
+        <option value="jumat">Jumat</option>
+        <option value="sabtu">Sabtu</option>
+        <option value="minggu">Minggu</option>
+    </select>
+    <button onclick="tampilkanSeragam()">Tampilkan Seragam</button>
+
+    <script>
+        function tampilkanSeragam() {
+            var hari = document.getElementById("hari").value;
+            var jenisSeragam;
+
+            switch (hari) {
+                case "senin":
+                    jenisSeragam = "Kemeja putih bawahan biru";
+                    break;
+                case "selasa":
+                    jenisSeragam = "Kemeja merah bawahan hitam";
+                    break;
+                case "rabu":
+                    jenisSeragam = "Kemeja biru bawahan abu-abu";
+                    break;
+                case "kamis":
+                    jenisSeragam = "Kemeja hijau bawahan coklat";
+                    break;
+                case "jumat":
+                    jenisSeragam = "Seragam olahraga";
+                    break;
+                default:
+                    jenisSeragam = "Tidak ada seragam yang ditentukan.";
+                    break;
+            }
+
+            console.log("Hari " + hari + ": " + jenisSeragam);
+        }
+    </script>
+</body>
+</html>
